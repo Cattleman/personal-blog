@@ -4,7 +4,10 @@ title: About Me
 permalink: /about/
 ---
 
-This is where you put the contents of your *About* page. Like all your pages, it's in [Markdown](https://guides.github.com/features/mastering-markdown/) format.
+Hello! <br> 
+I am a full-stack data scientist interested in the intersection of data, robotics, and agrictulture. I have a background in livestock/poultry and have worked in industry on a varity of problems inclding dynamic pricing, forecasting and image processing. I am motivated by complex problems and unique datasets. 
+
+[My LinkedIn Profile](https://www.linkedin.com/in/ian-hensel-847014ba/)
 
 This website is powered by **[fastpages](https://github.com/fastai/fastpages)** [^1].
 
