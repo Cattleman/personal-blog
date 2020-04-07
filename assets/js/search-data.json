@@ -29,7 +29,7 @@
   
       ,"page1": {
           "title": "About Me",
-          "content": "This is where you put the contents of your About page. Like all your pages, it’s in Markdown format. . This website is powered by fastpages 1. . a blogging platform that natively supports Jupyter notebooks in addition to other formats. &#8617; . |",
+          "content": "Hello! I am a full-stack data scientist interested in the intersection of data, robotics, and agrictulture. I have a background in livestock/poultry and have worked in industry on a varity of problems inclding dynamic pricing, forecasting and image processing. I am motivated by complex problems and unique datasets. . My LinkedIn Profile . This website is powered by fastpages 1. . a blogging platform that natively supports Jupyter notebooks in addition to other formats. &#8617; . |",
           "url": "https://cattleman.github.io/personal-blog/about/",
           "relUrl": "/about/",
           "date": ""
