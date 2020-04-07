@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.6.1 -->
+<title>Starting Probabilistic Programming Primer | fastpages</title>
+<meta name="generator" content="Jekyll v4.0.0" />
+<meta property="og:title" content="Starting Probabilistic Programming Primer" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="A minimal example of using markdown with fastpages." />
+<meta property="og:description" content="A minimal example of using markdown with fastpages." />
+<link rel="canonical" href="https://cattleman.github.io/personal-blog/markdown/2020/02/13/starting-probabilistic-programming-primer.html" />
+<meta property="og:url" content="https://cattleman.github.io/personal-blog/markdown/2020/02/13/starting-probabilistic-programming-primer.html" />
+<meta property="og:site_name" content="fastpages" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2020-02-13T00:00:00-06:00" />
+<script type="application/ld+json">
+{"datePublished":"2020-02-13T00:00:00-06:00","dateModified":"2020-02-13T00:00:00-06:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://cattleman.github.io/personal-blog/markdown/2020/02/13/starting-probabilistic-programming-primer.html"},"description":"A minimal example of using markdown with fastpages.","@type":"BlogPosting","url":"https://cattleman.github.io/personal-blog/markdown/2020/02/13/starting-probabilistic-programming-primer.html","headline":"Starting Probabilistic Programming Primer","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/personal-blog/assets/css/style.css"><link type="application/atom+xml" rel="alternate" href="https://cattleman.github.io/personal-blog/feed.xml" title="fastpages" /><link rel="shortcut icon" type="image/x-icon" href="/personal-blog/images/favicon.ico"><!-- Begin Jekyll SEO tag v2.6.1 -->
+<title>Starting Probabilistic Programming Primer | fastpages</title>
+<meta name="generator" content="Jekyll v4.0.0" />
+<meta property="og:title" content="Starting Probabilistic Programming Primer" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="A minimal example of using markdown with fastpages." />
+<meta property="og:description" content="A minimal example of using markdown with fastpages." />
+<link rel="canonical" href="https://cattleman.github.io/personal-blog/markdown/2020/02/13/starting-probabilistic-programming-primer.html" />
+<meta property="og:url" content="https://cattleman.github.io/personal-blog/markdown/2020/02/13/starting-probabilistic-programming-primer.html" />
+<meta property="og:site_name" content="fastpages" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2020-02-13T00:00:00-06:00" />
+<script type="application/ld+json">
+{"datePublished":"2020-02-13T00:00:00-06:00","dateModified":"2020-02-13T00:00:00-06:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://cattleman.github.io/personal-blog/markdown/2020/02/13/starting-probabilistic-programming-primer.html"},"description":"A minimal example of using markdown with fastpages.","@type":"BlogPosting","url":"https://cattleman.github.io/personal-blog/markdown/2020/02/13/starting-probabilistic-programming-primer.html","headline":"Starting Probabilistic Programming Primer","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+<link href="https://unpkg.com/@primer/css/dist/primer.css" rel="stylesheet" />
+<link rel="stylesheet" href="//use.fontawesome.com/releases/v5.0.7/css/all.css"><link type="application/atom+xml" rel="alternate" href="https://cattleman.github.io/personal-blog/feed.xml" title="fastpages" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.css" integrity="sha384-zB1R0rpPzHqg7Kpt0Aljp8JPLqbXI3bhnPWROx27a9N0Ll6ZP/+DiW/UqRcLbRjq" crossorigin="anonymous">
+    <script type="text/javascript" async src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML"> </script>
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.js" integrity="sha384-y23I5Q6l+B6vatafAwxRu/0oK/79VlbSz7Q9aiSZUvyWYIYsd+qj+o24G5ZU2zJz" crossorigin="anonymous"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/contrib/auto-render.min.js" integrity="sha384-kWPLUVMOks5AQFrykwIup5lo0m3iMkkHrD0uJ4H5cjeGihAutqP0yW0J6dpFiVkI" crossorigin="anonymous"></script>
+    <script>
+    document.addEventListener("DOMContentLoaded", function() {
+        renderMathInElement( document.body, {
+        delimiters: [
+            {left: "$$", right: "$$", display: true},
+            {left: "[%", right: "%]", display: true},
+            {left: "$", right: "$", display: false}
+        ]}
+        );
+    });
+    </script>
+
+
+<script>
+function wrap_img(fn) {
+    if (document.attachEvent ? document.readyState === "complete" : document.readyState !== "loading") {
+        var elements = document.querySelectorAll(".post img");
+        Array.prototype.forEach.call(elements, function(el, i) {
+            if (el.getAttribute("title")) {
+                const caption = document.createElement('figcaption');
+                var node = document.createTextNode(el.getAttribute("title"));
+                caption.appendChild(node);
+                const wrapper = document.createElement('figure');
+                wrapper.className = 'image';
+                el.parentNode.insertBefore(wrapper, el);
+                el.parentNode.removeChild(el);
+                wrapper.appendChild(el);
+                wrapper.appendChild(caption);
+            }
+        });
+    } else { document.addEventListener('DOMContentLoaded', fn); }
+}
+window.onload = wrap_img;
+</script>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function(){
+    // add link icon to anchor tags
+    var elem = document.querySelectorAll(".anchor-link")
+    elem.forEach(e => (e.innerHTML = '<i class="fas fa-link fa-xs"></i>'));
+    });
+</script>
+</head><body><header class="site-header">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/personal-blog/">fastpages</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/personal-blog/about/">About Me</a><a class="page-link" href="/personal-blog/search/">Search</a><a class="page-link" href="/personal-blog/categories/">Tags</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">Starting Probabilistic Programming Primer</h1><p class="page-description">A minimal example of using markdown with fastpages.</p><p class="post-meta post-meta-title"><time class="dt-published" datetime="2020-02-13T00:00:00-06:00" itemprop="datePublished">
+        Feb 13, 2020
+      </time>
+       • <span class="read-time" title="Estimated read time">
+    
+    
+      1 min read
+    
+</span></p>
+
+    
+      <p class="category-tags"><i class="fas fa-tags category-tags-icon"></i></i> 
+      
+        <a class="category-tags-link" href="/personal-blog/categories/#markdown">markdown</a>
+        
+      
+      </p>
+    
+
+    </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <ul class="section-nav">
+<li class="toc-entry toc-h1"><a href="#starting-probabilistic-programming---with-probabilistic-programming-primer-course">Starting Probabilistic Programming - with Probabilistic Programming Primer Course!</a>
+<ul>
+<li class="toc-entry toc-h2"><a href="#my-motivation">My motivation</a></li>
+<li class="toc-entry toc-h2"><a href="#enter-pymc3">Enter pymc3</a></li>
+<li class="toc-entry toc-h2"><a href="#probabilistic-programming-primer">Probabilistic Programming Primer</a></li>
+<li class="toc-entry toc-h2"><a href="#what-i-hope-to-learn">What I hope to learn</a></li>
+</ul>
+</li>
+</ul><h1 id="starting-probabilistic-programming---with-probabilistic-programming-primer-course">
+<a class="anchor" href="#starting-probabilistic-programming---with-probabilistic-programming-primer-course" aria-hidden="true"><span class="octicon octicon-link"></span></a>Starting Probabilistic Programming - with Probabilistic Programming Primer Course!</h1>
+
+<p><a href="https://product.peadarcoyle.com/">Probablistic Programming Primer</a></p>
+
+<h2 id="my-motivation">
+<a class="anchor" href="#my-motivation" aria-hidden="true"><span class="octicon octicon-link"></span></a>My motivation</h2>
+
+<p>I am motivated to build my intuition about probability and how to apply probabilistic thinking to decision making. Like many, I am heavily influenced by Taleb’s Icerto and seek to better understand uncertainty in the World.</p>
+
+<h2 id="enter-pymc3">
+<a class="anchor" href="#enter-pymc3" aria-hidden="true"><span class="octicon octicon-link"></span></a>Enter pymc3</h2>
+
+<p>I first encountered pymc3 through blogs on the Quantopian trading environment/ platform.  The notion that I could build models that shine a dim light around the “truth” appeals to me. I dove into Thomas Wiecki’s <a href="https://twiecki.io/">blog</a>, but for the most part, it went over my head at the time.</p>
+
+<p>Since then I got my feet wet with Pymc3 through Eric Ma and Hugo Bowne’s awesome 2018 scipy conference video tutorial: <a href="https://www.youtube.com/watch?v=89ye2hfsAsk">Here</a>. Over a weekend I went through (quickly) the video and associated exercises.</p>
+
+<p>I decided to follow as many of the pycm3 core devs that I could find on twitter. I’ve learned a lot from being a fly-on-the-wall of their various threads. Through twitter, I found George Ho’s awesome blog <strong>Eigenfoo</strong>: <a href="https://eigenfoo.xyz/">Here</a>.</p>
+
+<p>Another pymc3 dev I follow is is Peadar Coyle. I appreciate his perspective on all things stats/tech - Go Audio! I’ve also been salivating over his <a href="https://product.peadarcoyle.com/">Probablistic Programming Primer</a> course since he introduced it.</p>
+
+<h2 id="probabilistic-programming-primer">
+<a class="anchor" href="#probabilistic-programming-primer" aria-hidden="true"><span class="octicon octicon-link"></span></a>Probabilistic Programming Primer</h2>
+
+<p>First off - Thank you, Peadar for giving me the opportunity to take this course for free. I really appreciate the opportunity.</p>
+
+<p>I am excited to take this course to help me better understand how to structure the model development process and build my statistical intuition.</p>
+
+<h2 id="what-i-hope-to-learn">
+<a class="anchor" href="#what-i-hope-to-learn" aria-hidden="true"><span class="octicon octicon-link"></span></a>What I hope to learn</h2>
+
+<ul>
+  <li>How do practitioners think through selecting the distribution of priors?</li>
+  <li>How do I measure the performance of a probabilistic model?</li>
+  <li>How do I diagnose issues in my model?</li>
+  <li>How can I better communicate the results of a probabilistic model to stakeholders?</li>
+  <li>What is a trace?</li>
+</ul>
+
+<p>My plan is to work through the course over the next month with sporadic updates on my progress and a-ha moments along the way. At the end of the course, I’ll return to the questions above and share what I’ve learned and where I got confused.</p>
+
+  </div><a class="u-url" href="/personal-blog/markdown/2020/02/13/starting-probabilistic-programming-primer.html" hidden></a>
+</article>
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/personal-blog/"></data>
+
+  <div class="wrapper">
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col">
+        <p class="feed-subscribe">
+          <a href="/personal-blog/feed.xml">
+            <svg class="svg-icon orange">
+              <use xlink:href="/personal-blog/assets/minima-social-icons.svg#rss"></use>
+            </svg><span>Subscribe</span>
+          </a>
+        </p>
+      </div>
+      <div class="footer-col">
+        <p>An easy to use blogging platform with support for Jupyter Notebooks.</p>
+      </div>
+    </div>
+
+    <div class="social-links"><ul class="social-media-list"><li><a rel="me" href="https://github.com/Cattleman" title="Cattleman"><svg class="svg-icon grey"><use xlink:href="/personal-blog/assets/minima-social-icons.svg#github"></use></svg></a></li><li><a rel="me" href="https://twitter.com/IanHensel" title="IanHensel"><svg class="svg-icon grey"><use xlink:href="/personal-blog/assets/minima-social-icons.svg#twitter"></use></svg></a></li></ul>
+</div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>
