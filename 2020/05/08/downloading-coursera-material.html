@@ -1,0 +1,64 @@
+<h1 id="downloading-coursera-learning-material">Downloading Coursera Learning Material</h1>
+
+<h2 id="coursera-power-user">Coursera Power User</h2>
+
+<p>I’ve been taking a ton of Coursera courses focuses on GCP during the lockdown. 
+I really appreciate all the material that Coursera provides including pdfs, transcripts and of course all their videos. 
+However, I was getting anoyed that I had to download each transcript one at a time and thought there must be a better way!?</p>
+
+<h2 id="coursera-dl---there-is-a-better-way"><code class="highlighter-rouge">coursera-dl</code> - There is a better way!</h2>
+
+<p><a href="https://github.com/coursera-dl/coursera-dl">coursera-dl</a></p>
+
+<p><strong>Coursera-dl</strong> is a quick cli to help semi-automate downloading all the course material at once!</p>
+
+<h2 id="steps">Steps</h2>
+<ol>
+  <li>
+    <p><code class="highlighter-rouge">pip install coursera-dl</code></p>
+  </li>
+  <li>
+    <p><strong>In your browser navigate to where your cookies are stored.</strong></p>
+  </li>
+</ol>
+
+<p><strong>For Chrome:</strong></p>
+
+<p>To navigate to this you can paste this in your brower: <a href="chrome://settings/siteData">chrome://settings/siteData</a></p>
+
+<p>Settings &gt; Privacy and Security &gt; site settings &gt; Cookies and site data &gt; See all cookies and site data &gt; Coursera.org</p>
+
+<p>You will see: <code class="highlighter-rouge">CAUTH</code> listed, you will need the content later
+<br /></p>
+
+<ol>
+  <li><strong>Quick bash script</strong></li>
+</ol>
+
+<p><code class="highlighter-rouge">coursera-dl</code> has many arguments. <code class="highlighter-rouge">--help</code> and look at what you might want.</p>
+
+<p>I only wanted the transcripts/ txt and pdfs so I used the <code class="highlighter-rouge">--ignore-formats mp4</code> argument to ignore the videos.</p>
+
+<p>you can make a bash script by copy/paste this into a file like: <code class="highlighter-rouge">coursera_material_download.sh</code></p>
+
+<p>You will need to populate the various arguments.</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code># Quick script to grab course materials
+​
+​
+USER=&lt;COURSERA_USERNAME&gt;
+PASS=&lt;COURSERA_YOUR_PASSWORD&gt;
+​
+CAUTH=&lt;your cookies for coursera&gt;
+
+COURSES=&lt;course-name-from-URL&gt;
+​
+# ignore the videos
+coursera-dl -u $USER -p $PASS --ignore-formats mp4 -sl en -ca $CAUTH $COURSES
+
+</code></pre></div></div>
+
+<p><strong>To run it:</strong></p>
+
+<pre><code class="language-!Bash">$ bash coursera_material_download.sh
+</code></pre>
