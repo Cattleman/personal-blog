@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.0.0">Jekyll</generator><link href="https://cattleman.github.io/personal-blog/feed.xml" rel="self" type="application/atom+xml" /><link href="https://cattleman.github.io/personal-blog/" rel="alternate" type="text/html" /><updated>2020-05-08T16:59:33-05:00</updated><id>https://cattleman.github.io/personal-blog/feed.xml</id><title type="html">My Data Science and Machine Learning blog</title><subtitle>An easy to use blogging platform with support for Jupyter Notebooks.</subtitle><entry><title type="html">Downloading Coursera Learning Material</title><link href="https://cattleman.github.io/personal-blog/markdown/2020/05/08/downloading-coursera-material.html" rel="alternate" type="text/html" title="Downloading Coursera Learning Material" /><published>2020-05-08T00:00:00-05:00</published><updated>2020-05-08T00:00:00-05:00</updated><id>https://cattleman.github.io/personal-blog/markdown/2020/05/08/downloading-coursera-material</id><content type="html" xml:base="https://cattleman.github.io/personal-blog/markdown/2020/05/08/downloading-coursera-material.html">&lt;h1 id=&quot;downloading-coursera-learning-material&quot;&gt;Downloading Coursera Learning Material&lt;/h1&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.0.0">Jekyll</generator><link href="https://cattleman.github.io/personal-blog/feed.xml" rel="self" type="application/atom+xml" /><link href="https://cattleman.github.io/personal-blog/" rel="alternate" type="text/html" /><updated>2020-05-08T17:28:22-05:00</updated><id>https://cattleman.github.io/personal-blog/feed.xml</id><title type="html">My Data Science and Machine Learning blog</title><subtitle>An easy to use blogging platform with support for Jupyter Notebooks.</subtitle><entry><title type="html">Downloading Coursera Learning Material</title><link href="https://cattleman.github.io/personal-blog/markdown/2020/05/08/downloading-coursera-material.html" rel="alternate" type="text/html" title="Downloading Coursera Learning Material" /><published>2020-05-08T00:00:00-05:00</published><updated>2020-05-08T00:00:00-05:00</updated><id>https://cattleman.github.io/personal-blog/markdown/2020/05/08/downloading-coursera-material</id><content type="html" xml:base="https://cattleman.github.io/personal-blog/markdown/2020/05/08/downloading-coursera-material.html">&lt;h1 id=&quot;downloading-coursera-learning-material&quot;&gt;Downloading Coursera Learning Material&lt;/h1&gt;
 
 &lt;h2 id=&quot;coursera-power-user&quot;&gt;Coursera Power User&lt;/h2&gt;
 
@@ -43,18 +43,19 @@ However, I was getting anoyed that I had to download each transcript one at a ti
 
 &lt;p&gt;You will need to populate the various arguments.&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;# Quick script to grab course materials
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c&quot;&gt;#!/bin/sh&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;# Quick script to grab course materials&lt;/span&gt;
 ​
 ​
-USER=&amp;lt;COURSERA_USERNAME&amp;gt;
-PASS=&amp;lt;COURSERA_YOUR_PASSWORD&amp;gt;
+&lt;span class=&quot;nv&quot;&gt;USER&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&amp;lt;COURSERA_USERNAME&amp;gt;
+&lt;span class=&quot;nv&quot;&gt;PASS&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&amp;lt;COURSERA_YOUR_PASSWORD&amp;gt;
 ​
-CAUTH=&amp;lt;your cookies for coursera&amp;gt;
+&lt;span class=&quot;nv&quot;&gt;CAUTH&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&amp;lt;your cookies &lt;span class=&quot;k&quot;&gt;for &lt;/span&gt;coursera&amp;gt;
 
-COURSES=&amp;lt;course-name-from-URL&amp;gt;
+&lt;span class=&quot;nv&quot;&gt;COURSES&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&amp;lt;course-name-from-URL&amp;gt;
 ​
-# ignore the videos
-coursera-dl -u $USER -p $PASS --ignore-formats mp4 -sl en -ca $CAUTH $COURSES
+&lt;span class=&quot;c&quot;&gt;# ignore the videos&lt;/span&gt;
+coursera-dl &lt;span class=&quot;nt&quot;&gt;-u&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$USER&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-p&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$PASS&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;--ignore-formats&lt;/span&gt; mp4 &lt;span class=&quot;nt&quot;&gt;-sl&lt;/span&gt; en &lt;span class=&quot;nt&quot;&gt;-ca&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$CAUTH&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$COURSES&lt;/span&gt;
 
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 

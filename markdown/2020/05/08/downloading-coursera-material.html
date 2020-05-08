@@ -180,18 +180,19 @@ However, I was getting anoyed that I had to download each transcript one at a ti
 
 <p>You will need to populate the various arguments.</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code># Quick script to grab course materials
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c">#!/bin/sh</span>
+<span class="c"># Quick script to grab course materials</span>
 ​
 ​
-USER=&lt;COURSERA_USERNAME&gt;
-PASS=&lt;COURSERA_YOUR_PASSWORD&gt;
+<span class="nv">USER</span><span class="o">=</span>&lt;COURSERA_USERNAME&gt;
+<span class="nv">PASS</span><span class="o">=</span>&lt;COURSERA_YOUR_PASSWORD&gt;
 ​
-CAUTH=&lt;your cookies for coursera&gt;
+<span class="nv">CAUTH</span><span class="o">=</span>&lt;your cookies <span class="k">for </span>coursera&gt;
 
-COURSES=&lt;course-name-from-URL&gt;
+<span class="nv">COURSES</span><span class="o">=</span>&lt;course-name-from-URL&gt;
 ​
-# ignore the videos
-coursera-dl -u $USER -p $PASS --ignore-formats mp4 -sl en -ca $CAUTH $COURSES
+<span class="c"># ignore the videos</span>
+coursera-dl <span class="nt">-u</span> <span class="nv">$USER</span> <span class="nt">-p</span> <span class="nv">$PASS</span> <span class="nt">--ignore-formats</span> mp4 <span class="nt">-sl</span> en <span class="nt">-ca</span> <span class="nv">$CAUTH</span> <span class="nv">$COURSES</span>
 
 </code></pre></div></div>
 
