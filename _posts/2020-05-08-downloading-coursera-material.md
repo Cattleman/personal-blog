@@ -66,5 +66,5 @@ coursera-dl -u $USER -p $PASS --ignore-formats mp4 -sl en -ca $CAUTH $COURSES
 **To run it:** 
 
 ```!Bash
-$ bash coursera_material_download.sh
+$ coursera_material_download.sh
 ```
