@@ -47,6 +47,7 @@ you can make a bash script by copy/paste this into a file like: `coursera_materi
 You will need to populate the various arguments. 
 
 ```
+#!/bin/sh
 # Quick script to grab course materials
 ​
 ​
