@@ -1,3 +1,12 @@
+---
+toc: true
+layout: post
+description: blog_post
+categories: [markdown]
+title: Downloading Coursera Learning Material
+---
+
+
 # Downloading Coursera Learning Material
 
 
